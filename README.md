@@ -30,4 +30,4 @@ To test this locally:
 
 ## **Final Note**
 
-Although this was created specifically with Go in mind, it should work for JavaScript functions in a manner similar to the Go example in project.
+Although this was created specifically with Go in mind, it should work for JavaScript functions in a manner similar to the Go example in this project.
