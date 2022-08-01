@@ -23,7 +23,7 @@ If you've linked your site and committed changes to your repo, Netlify will run 
 To test this locally:
 
 * Ensure you have the latest version of the Netlify CLI installed
-* Run the `make` command at the root of the project and you should be able to see random text replace the placeholder in the function.
+* Run the `netlify build` command at the root of the project and you should be able to see random text replace the placeholder in the function.
 
 ## **Final Note**
 
