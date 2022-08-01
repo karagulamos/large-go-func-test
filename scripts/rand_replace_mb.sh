@@ -1,6 +1,6 @@
 declare -i max_input_size=250 # max request size in megabytes
 declare -i bytes_per_megabyte=1048576 # 1 megabyte 
-declare -i output_size=$1*bytes_per_megabyte/2 # we divide by 2 because od outputs 2 characters per byte
+declare -i output_size=$1*bytes_per_megabyte
 
 if  [[ $# -lt 3 || -z "$3" ]]; then # if the user didn't provide enough arguments or if the placeholder is empty
     echo "Usage: $0 <rand_text_size_in_megabytes> <path_to_function_file> <placeholder_text>"
@@ -20,5 +20,5 @@ fi
 if [ $(uname) = Darwin ]; then
 sed -i '' -f /dev/stdin $2; else sed -i -f /dev/stdin $2 
 fi << EOF 
-s/$3/$(base64 /dev/urandom | head -c $output_size | od -A n -v -t x1 | tr -d ' \n')/g
+s/$3/$(base64 /dev/urandom | od -A n -v -t x1 | tr -d ' \n' | head -c $output_size)/g
 EOF
