@@ -24,6 +24,9 @@ To test this locally:
 
 * Ensure you have the latest version of the Netlify CLI installed
 * Run the `netlify build` command at the root of the project and you should be able to see random text replace the placeholder in the function.
+* You can use the `du` command to check the function size like so:
+  * `du -sh .netlify/functions/hello-world` - uncompressed
+  * `du -sh .netlify/functions/hello-world.zip` - compressed
 
 ## **Final Note**
 
