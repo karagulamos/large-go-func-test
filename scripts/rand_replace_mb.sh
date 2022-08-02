@@ -1,6 +1,6 @@
-declare -i max_input_size=250 # max request size in megabytes
+declare -i max_input_size=300 # max request size in megabytes
 declare -i bytes_per_megabyte=1048576 # 1 megabyte 
-declare -i output_size=$1*bytes_per_megabyte
+declare -i output_size=$1*bytes_per_megabyte # output_size is in bytes
 
 if  [[ $# -lt 3 || -z "$3" ]]; then # if the user didn't provide enough arguments or if the placeholder is empty
     echo "Usage: $0 <rand_text_size_in_megabytes> <path_to_function_file> <placeholder_text>"
