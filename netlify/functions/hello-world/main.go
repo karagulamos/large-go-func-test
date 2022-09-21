@@ -10,6 +10,9 @@ import (
 
 func handler(ctx context.Context, request events.APIGatewayProxyRequest) (*events.APIGatewayProxyResponse, error) {
 	content := fmt.Sprintf("%s", "TEXT_TO_REPLACE")
+	
+	// should appear in console
+	fmt.Printf("Hello, %s!", humanize(len(content)))
 
 	return &events.APIGatewayProxyResponse{
 		StatusCode:      200,
